@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
     char line[256];
     char *token;
 
-    f = fopen(argv[1], "a");
+    f = fopen("matrix.txt", "r");
     if (!f) {
         fprintf(stderr, "Failed to open the file\n");
         return 1;
@@ -41,14 +41,14 @@ int main(int argc, char *argv[]) {
         }
         
         if (ncols != NCOLS) {
-            fprintf(stderr, "Line %d number of columns not correct. Found %d columns, should have %d\n", ncols, NCOLS);
+            fprintf(stderr, "Line %d number of columns not correct. Found %d columns, should have %d\n", nrows, ncols, NCOLS);
             fclose(f);
             return 1;
         }
     }
 
     if (nrows != NROWS) {
-        fprintf(stderr, "Number of rows not correct. Found %d rows, should have %d\n", nrows, NROWS);
+        fprintf(stderr, "Number of rows not correct. Found %d rows, should have %d\n", nrows, (int) NROWS);
         fclose(f);
         return 1;
     }

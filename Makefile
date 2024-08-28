@@ -14,7 +14,7 @@ SRC = assignment.c
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
-test: $(TARGET)
+test: $(TARGET) test.c
 	$(CC) $(CFLAGS) -o test test.c
 	./$(TARGET) 5 10
 	./test
