@@ -14,7 +14,12 @@ SRC = assignment.c
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
+test: $(TARGET)
+	$(CC) $(CFLAGS) -o test test.c
+	./$(TARGET) 5 10
+	./test
+
 # Rule to clean up the build files
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGET) test
 
