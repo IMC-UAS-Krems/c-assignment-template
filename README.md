@@ -1,7 +1,7 @@
 # Operating Systems
 ## C programming assignment
 
-Write a C program that complies withe following requirements:
+Write a C program that complies with the following requirements:
 
 1. When the program is called with a number of arguments different from 2, the code will output the following text to the standard output:
 
